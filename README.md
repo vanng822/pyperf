@@ -32,13 +32,17 @@ for some simple performance test on python
 ## Mandelbrot
 
 C-module
+
 4 function calls in 0.015 seconds
 
 Cython
+
 4 function calls in 0.018 seconds
 
 Swig on same c code as C-module
+
 4 function calls in 0.027 seconds
 
 Python
+
 12329 function calls in 2.347 seconds
