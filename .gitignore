@@ -1,6 +1,7 @@
 pycrawl.egg-info*
 build*
 .project
+.pydevproject
 *.so
 *.pyc
 python2.7
