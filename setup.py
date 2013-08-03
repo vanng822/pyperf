@@ -11,16 +11,7 @@ cymandelbrot = Extension('cymandelbrot', ['mandelbrot/cymandelbrot.c'])
 here = os.path.abspath(os.path.dirname(__file__))
 
 
-install_requires = [
-    'pyramid',
-    'pyramid_debugtoolbar',
-    'sqlalchemy',
-    'couchdb',
-    'psycopg2',
-    'waitress',
-    ]
-
-setup(name='pycrawl',
+setup(name='pyperf',
       version='0.1',
       author='',
       author_email='',
