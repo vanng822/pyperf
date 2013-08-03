@@ -18,7 +18,7 @@ for some simple performance test on python
 	# run the test code
 	> python setup.py test -s tests.test_mandelbrot_compare.MandelbrotTest
 	
-	# Compiling using swig on Mac but inchecked binary should work if you don't have swig
+	# Compiling using swig on Mac but inchecked binary may work if you don't have swig
 	> cd mandelbrot
 	
 	> swig -python swigmandelbrot.i 
