@@ -3,5 +3,6 @@ build*
 .project
 .pydevproject
 *.so
+*.o
 *.pyc
 python2.7
