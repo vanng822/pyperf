@@ -21,6 +21,6 @@ for some simple performance test on python
 
 > swig -python swigmandelbrot.i 
 
-> gcc -c mandelbrot.c swigmandelbrot_wrap.c -I../python2.7/lib/python2.7/
+> gcc -c mandelbrot.c swigmandelbrot_wrap.c -I../python2.7/include/python2.7/
 
 > gcc -bundle `python-config --ldflags` mandelbrot.o swigmandelbrot_wrap.o -o _swigmandelbrot.so
