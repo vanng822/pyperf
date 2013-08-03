@@ -2,7 +2,7 @@ import unittest
 import inspect
 import cymandelbrot
 import cmandelbrot
-from mandelbrot import pymandelbrot
+from mandelbrot import pymandelbrot, swigmandelbrot
 import time
 
 import cProfile
@@ -30,6 +30,16 @@ class MandelbrotTest(unittest.TestCase):
         print '\nMandelbrot Python Elapsed %.06f' % ptotal
         pr.disable()
         pr.print_stats()
+        
+        pr = cProfile.Profile()
+        pr.enable()
+        t = time.time()
+        swigmandelbrot.draw()
+        ptotal = time.time() - t
+        print '\nMandelbrot Swig Elapsed %.06f' % ptotal
+        pr.disable()
+        pr.print_stats()
+        
         
         pr = cProfile.Profile()
         pr.enable()

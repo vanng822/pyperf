@@ -15,3 +15,9 @@ for some simple performance test on python
 
 # run the test code
 > python setup.py test -s tests.test_mandelbrot_compare.MandelbrotTest
+
+# Compiling using swig on Mac
+> cd mandelbrot
+> swig -python swigmandelbrot.i 
+> gcc -c mandelbrot.c swigmandelbrot_wrap.c -I../python2.7/lib/python2.7/
+> gcc -bundle `python-config --ldflags` mandelbrot.o swigmandelbrot_wrap.o -o _swigmandelbrot.so
