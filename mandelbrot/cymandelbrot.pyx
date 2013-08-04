@@ -1,6 +1,5 @@
 
 import sys
-cimport cython
 
 stdout = sys.stdout
 
