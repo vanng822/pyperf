@@ -1,4 +1,3 @@
-#include <Python.h>
 #include <stdio.h>
 
 #define BAILOUT 16
