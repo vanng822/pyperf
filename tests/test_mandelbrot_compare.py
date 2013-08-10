@@ -52,7 +52,7 @@ class MandelbrotTest(unittest.TestCase):
         pr.disable()
         pr.print_stats()
         
-        print '\n %f times slower' % (ptotal / ctotal)
+        print '\n %f times slower' % (ptotal / cytotal)
         
         
 if __name__ == "__main__":
