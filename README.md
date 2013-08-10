@@ -46,3 +46,17 @@ Swig on same c code as C-module
 Python
 
 12329 function calls in 2.347 seconds
+
+## Sieve of Eratosthenes
+
+Python
+
+7 function calls in 9.984 seconds
+
+Cython
+
+4 function calls in 0.180 seconds
+ 
+C-module
+
+4 function calls in 0.173 seconds
