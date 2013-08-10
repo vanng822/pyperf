@@ -1,5 +1,4 @@
 #include <Python.h>
-#include <stdio.h>
 #include "mandelbrot.c"
 
 static PyObject* mandelbrot(PyObject* self, PyObject* args) {
