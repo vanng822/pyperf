@@ -1,4 +1,3 @@
-# cython: profile=True
 
 cdef extern from "math.h":
     double sqrt(double arg)
@@ -18,7 +17,8 @@ def find(int n):
         array[i] = 1
     
     i = 2
-    while i <= sqrt(n):
+    cdef double nsqrt = sqrt(n)
+    while i <= nsqrt:
         if array[i]:
             ip2 = i * i
             j = ip2
