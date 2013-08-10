@@ -35,8 +35,8 @@ class MandelbrotTest(unittest.TestCase):
         pr.enable()
         t = time.time()
         swigmandelbrot.draw()
-        ptotal = time.time() - t
-        print '\nMandelbrot Swig Elapsed %.06f' % ptotal
+        swigtotal = time.time() - t
+        print '\nMandelbrot Swig Elapsed %.06f' % swigtotal
         pr.disable()
         pr.print_stats()
         
@@ -45,9 +45,9 @@ class MandelbrotTest(unittest.TestCase):
         pr.enable()
         t = time.time()
         cymandelbrot.draw()
-        ctotal = time.time() - t
+        cytotal = time.time() - t
         
-        print '\nMandelbrot Cython Elapsed %.06f' % ctotal
+        print '\nMandelbrot Cython Elapsed %.06f' % cytotal
         
         pr.disable()
         pr.print_stats()
