@@ -17,7 +17,7 @@ def find(int n):
         array[i] = 1
     
     i = 2
-    cdef double nsqrt = sqrt(n)
+    cdef int nsqrt = <int> sqrt(n)
     while i <= nsqrt:
         if array[i]:
             ip2 = i * i
