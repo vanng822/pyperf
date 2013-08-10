@@ -6,6 +6,9 @@ from libc.stdlib cimport malloc, free
     
 def find(int n):
     
+    if n < 2:
+        return 0
+    
     cdef int i, ip2, jj, j, r
     
     ## list of boolean indexed from 0..n; only from 2 will used

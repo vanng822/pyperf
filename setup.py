@@ -10,6 +10,8 @@ cymandelbrot = Extension('cymandelbrot', ['mandelbrot/cymandelbrot.c'])
 
 cysoe = Extension('cysoe', sources = ['sieve_of_eratosthenes/cysoe.c'])
 
+csoe = Extension('csoe', sources = ['sieve_of_eratosthenes/csoe.c'])
+
 here = os.path.abspath(os.path.dirname(__file__))
 
 
@@ -20,5 +22,5 @@ setup(name='pyperf',
       url='',
       packages=find_packages(),
       test_suite="tests",
-      ext_modules = [cymandelbrot, cmandelbrot, cysoe],
+      ext_modules = [cymandelbrot, cmandelbrot, cysoe, csoe],
 )
