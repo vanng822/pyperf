@@ -5,7 +5,7 @@ def find(n):
     if n < 2:
         return 0
     ## list of boolean indexed from 0..n; only from 2 will used
-    array = [True for i in range(0, n+1)]
+    array = [1 for i in range(0, n+1)]
     i = 2
     nsqrt = int(math.sqrt(n))
     while i <= nsqrt:
@@ -14,7 +14,7 @@ def find(n):
             j = ip2
             jj = 1
             while j <= n:
-                array[j] = False
+                array[j] = 0
                 j = ip2 + jj * i
                 jj += 1
         
