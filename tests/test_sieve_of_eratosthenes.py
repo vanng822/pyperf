@@ -3,7 +3,7 @@ import unittest
 import inspect
 import time
 import cProfile
-from sieve_of_eratosthenes import soe
+from sieve_of_eratosthenes import soe, swigsoe
 import cysoe
 import csoe
 
@@ -37,10 +37,22 @@ class SoeTest(unittest.TestCase):
         csoe_pr.disable()
         csoe_pr.print_stats()
         
+        swigsoe_pr = cProfile.Profile()
+        swigsoe_pr.enable()
+        t = time.time()
+        swigsoe_result = swigsoe.find(MAX_NO)
+        swigtotal = time.time() - t
+        swigsoe_pr.disable()
+        swigsoe_pr.print_stats()
+        
+        
+        
         print 'py/cython %s' % (total / cytotal)
         print 'py/c %s' % (total / ctotal)
+        print 'py/swig %s' % (total / swigtotal)
         print 'found: %d' % soe_result
         self.assertEqual(soe_result, cysoe_result)
         self.assertEqual(soe_result, csoe_result)
+        self.assertEqual(soe_result, swigsoe_result)
         
         
