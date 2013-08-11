@@ -9,6 +9,7 @@ cmandelbrot = Extension('cmandelbrot', sources = ['mandelbrot/cmandelbrot.c'])
 cymandelbrot = Extension('cymandelbrot', ['mandelbrot/cymandelbrot.c'])
 
 cysoe = Extension('cysoe', sources = ['sieve_of_eratosthenes/cysoe.c'])
+cycsoe = Extension('cycsoe', sources = ['sieve_of_eratosthenes/cycsoe.c'])
 
 csoe = Extension('csoe', sources = ['sieve_of_eratosthenes/csoe.c'])
 
@@ -22,5 +23,5 @@ setup(name='pyperf',
       url='',
       packages=find_packages(),
       test_suite="tests",
-      ext_modules = [cymandelbrot, cmandelbrot, cysoe, csoe],
+      ext_modules = [cymandelbrot, cmandelbrot, cysoe, csoe, cycsoe],
 )
