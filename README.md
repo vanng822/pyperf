@@ -60,3 +60,7 @@ Cython
 C-module
 
 4 function calls in 0.173 seconds
+
+Swig
+
+4 function calls in 0.269 seconds
